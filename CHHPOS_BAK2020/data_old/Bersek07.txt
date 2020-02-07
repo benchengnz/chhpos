@@ -1,0 +1,14 @@
+///////////////////////////////////////
+// Bersek07 Engine 
+//
+// Realised by Fred alias Bersek01
+//
+// e-mail: fredericn@xilam.com 
+//
+///////////////////////////////////////
+
+
+
+Hello everyone !
+Here is my first demo based on a mode 7 engine. 
+This demo works well on Visual Boy Advance, Mappy 8.0 and more importantly on Hardware...

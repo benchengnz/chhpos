@@ -1,0 +1,33 @@
+		select customer.c_district, invhead.invoiceno, invhead.invdate, invline.unitprice, invline.c_unit, product.c_ptcode, prodtype.prodtype, ;
+		customer.c_street, ;
+		customer.c_streetno,;
+		customer.c_floor,;
+		customer.c_floorno,;
+		customer.c_ROOMNO,;
+		customer.c_BUILDNO,;
+		customer.c_ROOM,;
+		customer.c_FRNTBACK,;
+		product.c_prodcode,product.c_prdname, invline.c_prdname as productname , invhead.remark, ;
+		invline.quantity, invline.linetotal;
+		from  data\product left outer join  data\prodtype on product.c_ptcode = prodtype.prodtypecd ,  ;
+		data\invline,    ;
+		 data\invhead, data\customer ;
+		where invhead.invheadid=invline.invheadid ;
+		and customer.c_comcode = invhead.c_comcode; 
+		and invline.productid = product.productid ;
+		ORDER BY customer.c_district, invhead.invdate, invoiceno, invlineid ;
+		into cursor curinvrp	
+
+		brow norm
+		*
+		*select invhead.invoiceno, invhead.invdate, customer.c_street, ;
+		*product.c_prodcode, prodtype.prodtype, product.c_prdname, invhead.remark, ;
+		*invline.quantity, invline.linetotal;
+		*from data\product, ;
+		*data\invline, data\invhead, data\customer, DATA\PRODTYPE ;
+		*where invhead.invheadid=invline.invheadid ;
+		*AND product.C_ptcode = prodtype.prodtypecd;
+		*and customer.c_comcode = invhead.c_comcode ;
+		*and product.productid=invline.productid ;
+		*ORDER BY INVHEAD.INVOICENO;
+		*into cursor curinvrp			*/

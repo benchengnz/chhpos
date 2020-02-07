@@ -1,0 +1,64 @@
+Here are some notes about the pointing system i think it would be.
+
+-I should able to assign specific POINTS for individual products. Therefore, there should be a field added to the product form.
+
+-For each transaction, when customer buy our products, the invoice of each transaction should able to show the POINTS EARNED.  
+
+-System should able to accumulate the POINTS EARNED by each customer. In that case, customer form should have the POINTS AVIALABLE showned. It is obvious that POINTS AVIALABLE should also be shown in the invoice. 
+
+-Customer should able to redeem part/all of their POINTS in order to obtain gift/discount. That comes to field of POINTS REDEEMED included in the customer form. However, in order to reduce the complexity of operation. I am thinking whether we can assign netgative value to the POINTS EARNED field for POINTS REDEEMED. Therefore, each time when the customer redeem theirs POINTS, we give them gift/discount which be by showing them as a product listing in the invoice. 
+Also, the POINTS REDEEMED should be shown in the invoice. 
+
+here is an example.
+Scenario:
+
+Before a transaction
+
+PRODUCT form
+ITEM			PRICE					POINTS EARNED
+product A 		$120		   			    10
+product G(gift)		nil/any for redeeming price		   -50
+
+CUSTOMER form for X
+POINTS EARNED in the last transaction		20 
+POINTS REDEEMED	in the last transaction		0
+POINTS AVIALABLE       				120
+
+When there is a transaction
+
+In the invoice/invoice form, it will show
+ITEM		QTY		PRICE
+product A	1		$120
+product G	1		$0
+
+In the bottem of the invoice/invoice form, it will show
+POINTS EARNED 		10 
+POINTS REDEEMED		-50
+POINTS AVIALABLE       	80
+
+After that,
+In the CUSTOMER form for X
+POINTS EARNED in the last transaction		10 
+POINTS REDEEMED	in the last transaction		-50
+POINTS AVIALABLE       				80
+
+-Chinese name of the terms. 
+	POINTS EARNED 		本單積分 
+	POINTS REDEEMED		本單所用積分
+	POINTS AVIALABLE       	尚餘積分
+
+-About points expiriary. the system should about to reset all the points in certain period. However, I am not sure if it will be too complicated to assign each customer different period and reset them in different dates. Please let me know if it's possible to do so.
+
+Sorry for the lengthly notes. I wish u would understand what I mean. Again, leave it until you have time to do it. Thanks
+
+Sam
+ 
+
+
+
+
+
+
+
+
+ 
